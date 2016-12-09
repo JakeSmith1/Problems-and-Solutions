@@ -1,0 +1,30 @@
+{
+  "name": "problems-and-solutions",
+  "version": "1.0.0",
+  "description": "toy problems, algos, data structures",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakeSmith1/Problems-and-Solutions.git"
+  },
+  "keywords": [
+    "data",
+    "structures",
+    "algorithms",
+    "toy",
+    "problems"
+  ],
+  "author": "Jake Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakeSmith1/Problems-and-Solutions/issues"
+  },
+  "homepage": "https://github.com/JakeSmith1/Problems-and-Solutions#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
