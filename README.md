@@ -22,9 +22,3 @@ This repository contains problems I have done in my spare time. With Mocha and C
 
 ##Linked Lists:
 - Singly Linked List
-<!-- ```javascript
-    SinglyLinkedList //with Es6 classes
-    SinglyLinkedList.prototype.add()
-    SinglyLinkedList.prototype.remove()
-    SinglyLinkedList.prototype.find()
-``` -->
