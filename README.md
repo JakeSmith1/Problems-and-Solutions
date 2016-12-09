@@ -1,6 +1,7 @@
 # Problems-and-Solutions
 This repository contains problems I have done in my spare time. With testing:
 <div>
+  <img src="https://cldup.com/xFVFxOioAU.svg" alt="Mocha test framework"/>
   <img alt="ChaiJS" src="http://chaijs.com/img/chai-logo.png"/>
 </div>
 
