@@ -1,6 +1,6 @@
 # Problems-and-Solutions
 This repository contains problems I have done in my spare time. With testing:
-Markup : ![picture alt](assets/chaijs-mocha.png)
+![picture alt](assets/chaijs-mocha.png =200x83.33)
 
 ##To Run Tests:
 - open index.html in your browser
@@ -14,7 +14,7 @@ Markup : ![picture alt](assets/chaijs-mocha.png)
 - matrix rotation
 - string compression
 - string comparisons
-- permutaions
+- permutations
 
 ##Linked Lists:
 ```javascript
