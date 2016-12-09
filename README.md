@@ -1,6 +1,7 @@
 # Problems-and-Solutions
 This repository contains problems I have done in my spare time. With testing:
-![picture alt](assets/chaijs-mocha.png =200x83.33)
+<img src="assets/chaijs-mocha.png" alt="Drawing" style="{max-width: 200px, display: block}"/>
+
 
 ##To Run Tests:
 - open index.html in your browser
