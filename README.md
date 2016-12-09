@@ -1,11 +1,12 @@
 # Problems-and-Solutions
-This repository contains problems I have done in my spare time. With testing:
-<div>
+This repository contains problems I have done in my spare time. With Mocha and Chai testing.
+<!-- <div>
   <img src="https://cldup.com/xFVFxOioAU.svg" alt="Mocha test framework"/>
-  <img alt="ChaiJS" src="http://chaijs.com/img/chai-logo.png"/>
-</div>
+  <img alt="ChaiJS" src="http://chaijs.com/img/chai-logo.png" />
+</div> -->
 
 ##To Run Tests:
+- npm install
 - open index.html in your browser
 
 ##Sorting Algorithms:
