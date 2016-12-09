@@ -1,7 +1,8 @@
 # Problems-and-Solutions
 This repository contains problems I have done in my spare time. With testing:
-<img src="assets/chaijs-mocha.png" alt="Drawing" style="max-width:200px;"/>
-
+<div>
+  <img alt="ChaiJS" src="http://chaijs.com/img/chai-logo.png"/>
+</div>
 
 ##To Run Tests:
 - open index.html in your browser
