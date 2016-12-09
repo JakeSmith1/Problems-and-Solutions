@@ -44,7 +44,7 @@ SinglyLinkedList.prototype.remove = function(data) {
  if(!this.head) return 'nothing to remove';
  else if(this.head.data === data) {
    let remove = this.head.data;
-   this.head = null;
+   this.head = this.head.next;
    this.size--;
    return remove;
  } else {
@@ -63,19 +63,18 @@ SinglyLinkedList.prototype.remove = function(data) {
  }
 }
 
-SinglyLinkedList.prototype.find = function(data) {
-  if(!this.head) return 'empty list';
-  if(this.head.data === data) {
-    return true;
-  }
-  var current = this.head
+SinglyLinkedList.prototype.find = function(target) {
+  if(!this.head) return 'no nodes';
+  if(this.head.data === target) return true;
+  var current = this.head;
   while(current) {
-    if(current.data === data) return true;
+    if(current.data === target) {
+      return true;
+    }
     current = current.next;
   }
   return false;
 }
-
 // var list = new SinglyLinkedList();
 // list.add(1)
 // list.add(2)
