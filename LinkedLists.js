@@ -6,10 +6,6 @@ function Node(data) {
   this.next = null;
 }
 
-function DoublyLinkedList() {
-
-}
-
 //this is  Es5
 // function SinglyLinkedList() {
 //   this.head = null;
@@ -85,3 +81,59 @@ SinglyLinkedList.prototype.find = function(target) {
 // SinglyLinkedList.add();//not a function
 // SinglyLinkedList.startingValues() //{head: null, size: 0}
 // list.startingValues()//not a function
+
+SinglyLinkedList.prototype.removeDuplicates = function() {
+  var list = {};
+  var duplicates = [];
+  var current = this.head;
+  while(current) {
+    if(list[current.data]) {
+      duplicates.push(current.data)
+    }
+    list[current.data] = true;
+    current = current.next;
+  }
+  duplicates.forEach((target)=>this.remove(target));
+}
+//remove duplicates without taking up additional memory
+SinglyLinkedList.prototype.removeDupNoBuffer = function() {
+  var current = this.head;
+  while(current) {
+    var runner = current;
+    while(runner.next) {
+      if(runner.next.data === current.data) {
+        runner.next = runner.next.next;
+      } else {
+        runner = runner.next;
+      }
+    }
+    current = current.next
+  }
+}
+
+SinglyLinkedList.prototype.findNfromEnd = function(n) {
+  var point1 = this.head;
+  var point2 = this.head;
+  for(let i = 0; i < n; i += 1) {
+    if(!point1.next) return 'too far from the end';
+    point1 = point1.next;
+  }
+  while(point1.next) {
+    point1 = point1.next;
+    point2 = point2.next;
+  }
+  return point2;
+}
+
+SinglyLinkedList.prototype.deleteMiddle = function(n) {
+  if(this.size < 2) return 'size must be > 3 to delete the middle';
+  var p1 = this.head;
+  var p2 = null;
+  while(p1.next) {
+    p1 = p1.next.next;
+    p2 = p2 ? p2.next : this.head;
+  }
+  var middle = p2.next;
+  p2.next = p2.next.next;
+  return middle.data;
+}
