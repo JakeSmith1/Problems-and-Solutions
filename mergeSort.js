@@ -77,3 +77,5 @@ function mmerge(l,r) {
   }
   return [...res, ...l, ...r]
 }
+
+module.exports = {splitThenSort};
