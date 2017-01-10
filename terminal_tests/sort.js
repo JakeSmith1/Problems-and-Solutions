@@ -93,13 +93,13 @@ describe('Quick Sort (unless the input is sorted then it is O(n^2))', function()
   });
   it('should return a sorted array', function() {
     var input = [8,0,3,6,2,1];
-    var output = quickSort(input);
+    var output = quick.quickSort(input);
     expect(output.toString()).to.eql([0,1,2,3,6,8].toString());
   });
   it('should handle negative numbers and repeats', function() {
     var input = [20,-1,4,18,-44];
     var expected = [-44,-1,4,18,20].toString();
-    var actual = quickSort(input).toString();
+    var actual = quick.quickSort(input).toString();
     actual.should.equal(expected);
   });
 });
