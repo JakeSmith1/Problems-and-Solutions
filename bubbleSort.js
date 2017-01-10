@@ -6,9 +6,9 @@ function bubbleSort(array) {
     firstRun = false;
     swapped = false;
 
-    for(let i = 0; i < array.length; i += 1) {
+    for(var i = 0; i < array.length; i += 1) {
       if(array[i] > array[i+1]) {
-        let temp = array[i];
+        var temp = array[i];
         array[i] = array[i+1];
         array[i+1] = temp;
         swapped = true;
@@ -17,3 +17,5 @@ function bubbleSort(array) {
   }
   return array;
 }
+
+module.exports = {bubbleSort};

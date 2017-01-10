@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <!-- To run this example make sure you have run npm install, then run node vanillaJS/serrver.js, then open this file in your browser -->
+  <h1>Vanilla JS XMLHttpRequest</h1>
+  <input type="text" name="attatchToURL" value="" placeholder="type a string to attach to the xml request">
+  <button type="button" class="send-XMLHTTP" name="button" data-url="http://localhost:3000/is-the-url-being-parsed">Send a Request</button>
+  <p class="results"></p>
+
+  <script>
+  //Some examples inspired by https://www.sitepoint.com/guide-vanilla-ajax-without-jquery/
+  //don't forget to checkout the docs! https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+
+  //a simple request to the server listening on port 3000
+  var simpleReq = function() {
+    //create instance of XMLHttpRequest class to make the request
+    var xhr = new XMLHttpRequest();
+    //open method initializes a request //xhrReq.open(method, url, async, user, password);
+    xhr.open('GET', 'http://localhost:3000/');
+    //send the request, since this is a 'GET', null is passed in
+    xhr.send(null);
+  };
+  simpleReq();
+
+  //send a request when the button is clicked and display the results in the p element
+  var send = document.querySelector('.send-XMLHTTP');
+  var results = document.querySelector('.results');
+  var toReadyStateDescription = function (state) {
+    switch (state) {
+      case 0:
+      return 'UNSENT';
+      case 1:
+      return 'OPENED';
+      case 2:
+      return 'HEADERS_RECEIVED';
+      case 3:
+      return 'LOADING';
+      case 4:
+      return 'DONE';
+      default:
+      return '';
+    }
+  };
+  send.addEventListener('click', function (e) {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+      console.log('Inside the onreadystatechange event with readyState: ' +
+      toReadyStateDescription(request.readyState));
+      if(request.readyState === 4) {
+        var response = request.response;
+        results.innerHTML = response;
+      };
+    }
+    request.open('GET', e.target.dataset.url, true);
+    request.send();
+  });
+
+  var input = document.querySelector('input');
+  input.addEventListener('input', function(e) {
+    var string = e.currentTarget.value.split(' ').join('-');
+    var req = new XMLHttpRequest();
+    req.open('GET', 'http://localhost:3000/' + string);
+    req.send(null);
+    req.onreadystatechange = function () {
+      if(req.readyState === XMLHttpRequest.DONE && req.status === 200) {
+        document.querySelector('p').innerHTML = req.responseText;
+      }
+    }
+  })
+
+  // with Jquery (not loaded here, if you want to play around with it jquery cdn script below)
+  // $.ajax({
+  //   url: "test.html",
+  //   context: document.body,
+  //   success: function(){
+  //     $(this).append("h1").text('Done');
+  //   }
+  // });
+  </script>
+</body>
+</html>

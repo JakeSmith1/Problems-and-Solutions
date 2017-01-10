@@ -9,15 +9,17 @@ function quickSort(array) {
   var pivot = array[length],
     left = [],
     right = [];
-  for(let i = 0; i < length; i += 1) {
+  for(var i = 0; i < length; i += 1) {
     if(array[i] < pivot) {
       left.push(array[i]);
     } else {
       right.push(array[i]);
     }
   }
-  return [...quickSort(left), pivot, ...quickSort(right)];
+  // return [...quickSort(left), pivot, ...quickSort(right)];
+  return quickSort(left).concat(pivot).concat(quickSort(right))
 }
 // console.log(quickSort([1,5,7,8,9,5,4,3,2,5,4,3,2]));
 // console.log(quickSort([1,2,1,-1,5]));
 // console.log(quickSort([1]));
+module.exports = {quickSort};

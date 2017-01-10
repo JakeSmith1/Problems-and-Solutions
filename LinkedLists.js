@@ -137,3 +137,5 @@ SinglyLinkedList.prototype.deleteMiddle = function(n) {
   p2.next = p2.next.next;
   return middle.data;
 }
+
+module.exports = {SinglyLinkedList}

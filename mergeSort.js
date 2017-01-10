@@ -22,7 +22,8 @@ function zip(left, right) {
     merged.push(right.shift());
     }
   }
-  return [...merged, ...left, ...right];
+  // return [...merged, ...left, ...right];
+  return merged.concat(left).concat(right);
 }
 
 //iterative merge in ascending order
@@ -30,7 +31,7 @@ function iterative(a) {
   var l = a.length;
   var singles = []
   //push array of each item into an array to be sorted later(instead of recursively splitting the array)
-  for(let i = 0; i < l; i += 1) {
+  for(var i = 0; i < l; i += 1) {
     singles.push([a[i]]);
   }
   singles.push([])//incase odd number
@@ -68,12 +69,15 @@ function splitter(a) {
   return mmerge(splitter(left), splitter(right))
 }
 function mmerge(l,r) {
-  let res = [];
+  var res = [];
   while(l.length && r.length) {
     if(l[0] >= r[0]) {
       res.push(l.shift())
     } else
     res.push(r.shift())
   }
-  return [...res, ...l, ...r]
+  // return [...res, ...l, ...r];
+  return res.concat(l).concat(r);
 }
+
+module.exports = {splitThenSort};
