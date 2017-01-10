@@ -75,7 +75,8 @@ function mmerge(l,r) {
     } else
     res.push(r.shift())
   }
-  return [...res, ...l, ...r]
+  // return [...res, ...l, ...r];
+  return res.concat(l).concat(r);
 }
 
 module.exports = {splitThenSort};
