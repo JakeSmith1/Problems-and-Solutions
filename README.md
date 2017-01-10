@@ -7,7 +7,8 @@ This repository contains problems I have done in my spare time. With Mocha and C
 
 ##To Run Tests:
 - npm install
-- open index.html in your browser
+- npm test
+- If you want to run the tests in your browser, then open index.html
 
 ##Sorting Algorithms:
 - Bubble sort

@@ -21,3 +21,4 @@ function quickSort(array) {
 // console.log(quickSort([1,5,7,8,9,5,4,3,2,5,4,3,2]));
 // console.log(quickSort([1,2,1,-1,5]));
 // console.log(quickSort([1]));
+module.exports = {quickSort};

@@ -62,3 +62,4 @@ var containsEdge = function(graph, to, from) {
 // removeEdge(people,'jimmy', 'arthur')
 // removeVertex(people, 'jimmy')
 // containsEdge(people, 'jimmy', 'arthur')
+module.exports = {makeGraph, addVertex, contains, removeEdge, removeVertex, addEdge}

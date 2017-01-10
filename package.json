@@ -4,7 +4,7 @@
   "description": "toy problems, algos, data structures",
   "main": "index.html",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha terminal_tests"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
     "structures",
     "algorithms",
     "toy",
-    "problems"
+    "problems",
+    "vanillaJS"
   ],
   "author": "Jake Smith",
   "license": "ISC",
