@@ -22,7 +22,8 @@ function zip(left, right) {
     merged.push(right.shift());
     }
   }
-  return [...merged, ...left, ...right];
+  // return [...merged, ...left, ...right];
+  return merged.concat(left).concat(right);
 }
 
 //iterative merge in ascending order
