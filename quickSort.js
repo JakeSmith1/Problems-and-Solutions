@@ -9,7 +9,7 @@ function quickSort(array) {
   var pivot = array[length],
     left = [],
     right = [];
-  for(let i = 0; i < length; i += 1) {
+  for(var i = 0; i < length; i += 1) {
     if(array[i] < pivot) {
       left.push(array[i]);
     } else {
